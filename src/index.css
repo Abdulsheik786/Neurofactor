@@ -1,0 +1,53 @@
+/* Basic reset for margin/padding and box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles using theme variables (defined in src/styles/variables.css) */
+:root {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility container */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 var(--space-md) 0;
+  color: var(--color-text);
+}
+
+/* Buttons, links */
+a { color: var(--color-primary); text-decoration: none; }
+button { font-family: inherit; }
+
+/* Small layout helpers */
+.app { display: flex; flex-direction: column; min-height: 100vh; }
+.site-header { background: transparent; padding: var(--space-md) 0; }
+.site-main { flex: 1 0 auto; padding: var(--space-xl) 0; }
+.site-footer { padding: var(--space-md) 0; text-align: center; }
+
